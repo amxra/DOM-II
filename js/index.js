@@ -58,3 +58,82 @@ window.addEventListener('resize', () => {
           }, 500);
     })
 })
+
+
+//#5
+
+bannerImage = document.querySelector('header img')
+bannerImage.addEventListener('dblclick', (event) => {
+    event.target.style.display = 'none';
+
+    setTimeout(function() {
+        event.target.style.display = 'initial';
+      }, 500);
+})
+
+
+//#6
+
+buttons = document.querySelectorAll('.btn')
+buttons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+        event.target.style.backgroundColor = 'green';
+        event.target.style.color = 'white'
+
+        setTimeout(function() {
+            event.target.style.backgroundColor = '#17A2B8';
+          }, 500);
+
+    })
+})
+
+
+
+//#7 - wheel 
+
+
+
+buttons.forEach((button)=>{
+    button.addEventListener('wheel', (event) => {
+        event.target.style.fontSize = '25px';
+
+        setTimeout(function() {
+            event.target.style.fontSize = 'initial';
+          }, 2000);
+    })
+})
+
+
+
+//#8 - mousedown
+
+const header = document.querySelectorAll('h1,h2,h4')
+
+header.forEach((headers)=>{
+    headers.addEventListener('mousedown', (event)=>{
+        event.target.style.color = "blue";
+
+        setTimeout(function() {
+            event.target.style.color = "initial";
+          }, 1000);
+    })
+})
+
+
+
+//#9 
+
+const headerImg = document.querySelector(".img-content img");
+headerImg.addEventListener('mouseenter', (event)=>{
+
+    headerImg.style.opacity = "0.6";
+
+}) 
+
+
+
+//#10 - dragover
+
+document.body.addEventListener('dragover', (event) => {
+    event.preventDefault();
+});
